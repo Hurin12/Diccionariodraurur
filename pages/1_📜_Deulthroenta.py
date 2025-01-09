@@ -85,7 +85,7 @@ def get_word_details(word, df):
 
 
 # Streamlit UI
-st.title("Diccionario Draur")
+st.image("images/foto1.png")
 
 df = load_data("Diccionario dr.xlsm")
 noun_list = df.iloc[:, 1].dropna().tolist()
