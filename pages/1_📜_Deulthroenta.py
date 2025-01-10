@@ -105,21 +105,17 @@ if df is not None:  # Proceed only if the dataframe was loaded successfully
     if word:
         details = get_word_details(word, df)
 
-        if details:
-            st.subheader(f"{details['category']} Details")
-            st.write(f"**Short Translation (Spanish):** {details['short_translation']}")
+        st.subheader(details["short_translation"])
+        st.write(details["etymology"])
 
-            if details["category"] == "Noun":
-                st.write(f"**Gender:** {details['gender']}")
+        if details["category"] == "Noun":
+            st.write(f"**Gender:** {details['gender']}")
 
-            st.write(f"**Etimologia:** {details['etymology']}")
-
-            st.write("**Definiciones:**")
+        if details["definitions"]:
             for definition in details["definitions"]:
                 st.write(f"- {definition}")
 
+        if details["examples"]:
             st.write("**Ejemplos:**")
             for example in details["examples"]:
                 st.write(f"- {example}")
-        else:
-            st.error("Sorry, the word is not found in the dictionary.")
