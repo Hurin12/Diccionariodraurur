@@ -85,9 +85,9 @@ def get_word_details(word, df):
 
 
 # Streamlit UI
-st.image("images/foto1.png")
+st.title("Diccionario Draur")
 
-df = load_data("Diccionario dr.xlsm")
+df = load_data("data/Diccionario dr.xlsm")
 noun_list = df.iloc[:, 1].dropna().tolist()
 verb_list = df.iloc[:, 7].dropna().tolist()
 words_list = noun_list + verb_list
@@ -96,7 +96,7 @@ words_list = noun_list + verb_list
 if df is not None:  # Proceed only if the dataframe was loaded successfully
     # Input field for the word
     word = st.selectbox(
-        labels.dropdown_label,
+        labels.dra_dropdown_label,
         sorted(words_list),
         index=None,
         placeholder=labels.dropdown_placeholder,

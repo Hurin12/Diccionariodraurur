@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.write("Welcome to page text")
-df = pd.read_excel("Diccionario dr.xlsm", sheet_name="Texts")
+df = pd.read_excel("data/Diccionario dr.xlsm", sheet_name="Texts")
 df = df.dropna(how="all", axis=1).dropna(how="all", axis=0).reset_index(drop=True)
 df.columns=["spa", "dra", "spa_lit"]
 # st.write(df.head())
