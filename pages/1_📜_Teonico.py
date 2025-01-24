@@ -27,9 +27,14 @@ def parse_definitions_examples(definition_str, example_str):
     return definitions, examples
 
 
+with open("styles.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
 file_path = "data/teonicodicc.xlsx"
 
-st.title("Diccionario Teónico")
+st.markdown("<h1><a href='/' target='_self' class='invisible-link'>Diccionario Teónico</a></h1>", unsafe_allow_html=True)
+
 df = pd.read_excel(file_path).dropna(how="all", axis=1)
 if df is None:
     st.error("Teonico excel file not loaded correctly")

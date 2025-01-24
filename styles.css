@@ -1,6 +1,35 @@
-p {
-    font-family: 'Baskerville Old Face', serif;  /* Change this to your desired font */
+[data-testid="stSidebar"],
+[data-testid="stBaseButton-headerNoPadding"] {
+    display: none;
 }
+
+div[data-testid="stMainBlockContainer"] {
+    padding-top: 64px;
+}
+
+h1  {
+    text-align: center;
+}
+
+p, li, th, td, input, .st-ae {
+    font-family: 'Baskerville Old Face', serif;
+}
+
+p[class="pre-header"] {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Baskerville Old Face', serif;  /* Change this to your desired font */
+    font-family: 'Baskerville Old Face', serif;
+}
+
+h1 > span  {
+    display: none !important;
+}
+
+a[class="invisible-link"] {
+    text-decoration: none;
+    color: inherit;
 }
