@@ -93,4 +93,9 @@ if word:
     if word_row["cat1"] in constants.categories_verb:
         current_verb = word_row[verb_cols]
         verb_table = current_verb.fillna("-").values.reshape(4, 3)
+        verb_table = pd.DataFrame(
+            verb_table,
+            columns=["Presente", "Pretérito Perfecto", "Futuro"],
+            index=["1ª Pers. Sing.", "2ª Pers. Sing.", "3ª Pers. Sing.", "Plural"],
+        )
         st.table(verb_table)

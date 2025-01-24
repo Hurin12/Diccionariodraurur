@@ -4,15 +4,15 @@
 }
 
 div[data-testid="stMainBlockContainer"] {
-    padding-top: 64px;
+    padding-top: 32px;
 }
 
-h1  {
+h1 {
     text-align: center;
 }
 
-p, li, th, td, input, .st-ae {
-    font-family: 'Baskerville Old Face', serif;
+h1, h2, h3, h4, h5, h6, p, li, th, td, input, .st-ae {
+    font-family: 'Baskerville Old Face', 'Libre Baskerville', 'Georgia', 'Palatino Linotype', serif !important;
 }
 
 p[class="pre-header"] {
@@ -21,11 +21,7 @@ p[class="pre-header"] {
     margin-bottom: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Baskerville Old Face', serif;
-}
-
-h1 > span  {
+h1>span, h2>span {
     display: none !important;
 }
 

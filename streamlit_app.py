@@ -1,5 +1,7 @@
 import streamlit as st
 
+import constants
+
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
     page_title="Diccionario Teónico",
@@ -15,4 +17,4 @@ st.markdown("<p class='pre-header'>Accede al diccionario de teónico</p>", unsaf
 st.markdown("<h1><a href='/Teonico' target='_self' class='invisible-link'>Diccionario Teónico</a></h1>", unsafe_allow_html=True)
 
 st.markdown("<p class='pre-header'>Página de ventas del libro</p>", unsafe_allow_html=True)
-st.markdown("<h1><a href='/Teonico' target='_self' class='invisible-link'>Adquiere un ejemplar</a></h1>", unsafe_allow_html=True)
+st.markdown(f"<h1><a href='{constants.url_amazon_nerakhis}' target='_blank' class='invisible-link'>Adquiere un ejemplar</a></h1>", unsafe_allow_html=True)
